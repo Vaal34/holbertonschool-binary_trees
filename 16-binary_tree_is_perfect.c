@@ -21,10 +21,12 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		j += 1 + binary_tree_is_perfect(tree->right);
 	}
 
-	if ((i > j) || (j > i))
-		return (0);
-
 	if (((tree->left) && (tree->right)) && (i == j))
 		return (1);
+
+	if ((i > j) || (j > i))
+		return (0);
+	
 	return (0);
 }
+
