@@ -11,7 +11,13 @@ int binary_tree_is_full(const binary_tree_t *tree)
 
 	if (tree->right == NULL && tree->left == NULL)
 		return (1);
-	else if (tree->right && tree->left)
+	
+	if (tree->right && tree->left)
+		/* return 1 si la node possède deux child
+		* retourne le résultat de l'opération logique "ET" 
+		* de ces appels récursifs. Si le noeud courant n'a qu'un seul enfant, 
+		* elle retourne 0 car l'arbre n'est pas complet dans ce cas.
+		*/
 		return (binary_tree_is_full(tree->right) && binary_tree_is_full(tree->left));
 	return (0);
 }
