@@ -10,6 +10,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
+
+
 	if (tree->left)
 	{
 		i += 1 + binary_tree_is_perfect(tree->left);
