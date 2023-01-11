@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * binary_tree_t - that finds the uncle of a node
+ * binary_tree_uncle - that finds the uncle of a node
  * @node: binary tree
  * Return: node
  */
